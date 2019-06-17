@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', 'Noto Sans JP', sans-serif;
+}
+
+.card {
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 100px auto;
+  justify-items: stretch;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #ffff;
+
+  .image {
+    width: 100%;
+    grid-column: auto;
+    grid-row: 1 / 2;
+
+    img {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  &_content {
+    grid-column: auto;
+    grid-row: 2 / 3;
+    margin: 10px;
+
+    .title {
+      font-size: calc(20rem * 0.0625);
+      color: #212121;
+    }
+
+    .text {
+      font-size: calc(14rem * 0.0625);
+      white-space: pre-wrap;
+      color: #616161;
+    }
+  }
+}
