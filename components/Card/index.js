@@ -8,9 +8,9 @@ const Card = ({ title, text }) => (
       <img src="https://dummyimage.com/600x300/444/fff"></img>
     </div>
     <div styleName="card_content">
-      <div styleName="title">Test タイトル</div>
+      <div styleName="title">{title}</div>
       <div styleName="text">
-        {"test content\nsome text...\nなんかのテキスト...\nsome text...\nなんかのテキスト..."}
+        {text}
       </div>
     </div>
   </div>

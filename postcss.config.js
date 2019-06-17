@@ -1,12 +1,10 @@
 module.exports = {
   plugins: [
     require('postcss-preset-env')({
-      stage: 0,
-      browsers: 'last 2 versions'
+      stage: 0
     }),
     require('autoprefixer')({
-      grid: true,
-      browsers: 'last 2 versions'
+      grid: true
     }),
     require('postcss-nested')
   ]

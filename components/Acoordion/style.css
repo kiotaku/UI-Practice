@@ -1,0 +1,49 @@
+.accordion {
+  width: 100%;
+
+  --text-color: #616161;
+  --text-size: calc(14rem * 0.0625);
+  --text-line-height: calc(16rem * 0.0625);
+
+  .text {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    font-size: var(--text-size);
+    white-space: pre-wrap;
+    color: var(--text-color);
+    line-height: var(--text-line-height);
+    transition: max-height 1s cubic-bezier(0.8, 0, 0.2, 1);
+    max-height: 800px;
+  }
+
+  .collapse {
+    max-height: calc(var(--text-line-height) * 3);
+    text-overflow: ellipsis;
+  }
+
+  .expands-button {
+    width: 100%;
+    font-size: var(--text-size);
+    background-color: #ffff;
+    color: #9e9e9e;
+    border: none;
+    outline: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .button-text {
+      align-items: flex-end;
+      justify-content: center;
+      height: var(--text-line-height);
+      display: flex;
+      border-bottom: 1px dotted #9e9e9e;
+
+      .material-icons {
+        font-size: var(--text-line-height);
+        height: var(--text-line-height);
+      }
+    }
+  }
+}
