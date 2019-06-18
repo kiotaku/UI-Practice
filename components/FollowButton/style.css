@@ -1,0 +1,45 @@
+.button {
+  width: calc(16rem * 0.0625 * 7);
+  height: calc(16rem * 0.0625 * 2);
+  border-radius: calc(16rem * 0.0625 * 1);
+  font-size: calc(14rem * 0.0625 * 1);
+  outline: none;
+}
+
+.follow {
+  background: #ffff;
+  border: 2px solid #FF9800;
+  color: #FF9800;
+  transition: all 0.3s 0s ease;
+
+  &:hover {
+    background: #FFF3E0;
+  }
+
+  &:active {
+    background: #FF9800;
+  }
+}
+
+.following {
+  background: #FF9800;
+  border: none;
+  color: #ffff;
+  transition: all 0.3s 0s ease;
+
+  &:hover {
+    background: #DD2C00;
+
+    &::after {
+      content: 'Unfollow';
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  &:active {
+    background: #FFCC80;
+  }
+}
