@@ -16,7 +16,7 @@ const Acoordion = ({ text }) => {
     if (expands) {
       setTimeout(() => {
         setTextHeight(textbox.current.getBoundingClientRect().height)
-      }, 1200)
+      }, 1000)
     }
   }, [expands])
 
