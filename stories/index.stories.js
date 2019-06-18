@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Card from 'components/Card'
 import Acoordion from 'components/Acoordion'
+import Icon from 'components/Icon'
 import { withKnobs, text } from '@storybook/addon-knobs/react'
 
 storiesOf('Demo', module)
@@ -14,4 +15,7 @@ storiesOf('Demo', module)
   ))
   .add('short text Acoordion', () => (
     <Acoordion text={text('Text', 'text content\nsome text...')}></Acoordion>
+  ))
+  .add('Icon', () => (
+    <Icon></Icon>
   ))
