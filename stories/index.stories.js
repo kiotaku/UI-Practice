@@ -12,3 +12,6 @@ storiesOf('Demo', module)
   .add('Acoordion', () => (
     <Acoordion text={text('Text', 'text content\nsome text...\nなんかのテキスト...\n長いテキスト...\n...\n...\n...\n...')}></Acoordion>
   ))
+  .add('short text Acoordion', () => (
+    <Acoordion text={text('Text', 'text content\nsome text...')}></Acoordion>
+  ))

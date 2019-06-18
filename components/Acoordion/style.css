@@ -13,12 +13,12 @@
     white-space: pre-wrap;
     color: var(--text-color);
     line-height: var(--text-line-height);
-    transition: max-height 1s cubic-bezier(0.8, 0, 0.2, 1);
-    max-height: 800px;
+    transition: all 1s 0s ease-in-out;
+    max-height: 100vh;
   }
 
   .collapse {
-    max-height: calc(var(--text-line-height) * 3);
+    max-height: calc(var(--text-line-height) * 3.1);
     text-overflow: ellipsis;
   }
 
