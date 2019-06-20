@@ -1,0 +1,148 @@
+.profile {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 80px 10px auto auto auto auto;
+  align-items: center;
+  justify-items: center;
+
+  .image-box {
+    width: 100%;
+    padding-top: 66.66%;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    position: relative;
+
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .official {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    z-index: 1;
+  }
+
+  .follow-button {
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .user-info {
+    width: 100%;
+    grid-column: span 3;
+    grid-row: 4 / 5;
+    place-self: center;
+
+    .display-name {
+      margin: calc(20rem * 0.0625 / 10);
+      text-align: center;
+      line-height: calc(22rem * 0.0625);
+      font-size: calc(20rem * 0.0625);
+      color: #212121;
+    }
+
+    .user-id {
+      margin: calc(14rem * 0.0625 / 10);
+      text-align: center;
+      line-height: calc(16rem * 0.0625);
+      font-size: calc(14rem * 0.0625);
+      color: #616161;
+    }
+  }
+
+  .sites {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .website {
+      color: #FF9800;
+      margin: 10px;
+    }
+
+    .facebook {
+      color: #FF9800;
+      margin: 10px;
+    }
+
+    .twitter {
+      color: #FF9800;
+      margin: 10px;
+    }
+  }
+
+  .follow {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .following {
+      text-align: right;
+      grid-column: 1 / 2;
+      grid-row: span 1;
+      line-height: calc(18rem * 0.0625);
+    }
+
+    .bar {
+      grid-column: 2 / 3;
+      grid-row: span 1;
+      height: calc(26rem * 0.0625);
+      border-left: 1px solid #EEEEEE;
+      border-right: 1px solid #EEEEEE;
+    }
+
+    .follower {
+      text-align: left;
+      grid-column: 3 / 4;
+      grid-row: span 1;
+      line-height: calc(18rem * 0.0625);
+    }
+
+    .number {
+      color: #212121;
+      font-size: calc(16rem * 0.0625);
+    }
+
+    .unit {
+      margin-left: 2px;
+      color: #616161;
+      font-size: calc(14rem * 0.0625);
+    }
+  }
+
+  .description {
+    width: calc(100% - 20px);
+    grid-column: 1 / 4;
+    grid-row: 7 / 8;
+    margin: 0 10px;
+  }
+}
