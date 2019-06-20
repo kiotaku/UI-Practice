@@ -1,0 +1,141 @@
+@keyframes strechDiamond {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+@keyframes strechTitle {
+  0% {
+    line-height: 0em;
+  }
+  30% {
+    line-height: 0em;
+  }
+  50% {
+    line-height: 1.2em;
+  }
+  80% {
+    line-height: 1.2em;
+  }
+  100% {
+    line-height: 0em;
+  }
+}
+
+@keyframes strechTitleBar {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+  50% {
+    opacity: 1;
+    width: calc(100vw - 2px);
+  }
+  70% {
+    opacity: 1;
+    width: calc(100vw - 2px);
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+* {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-items: center;
+
+  --background-color: orange;
+  --sub-color: white;
+  --text-color: #999999;
+  --animation-duration-diamond: 3s;
+  --animation-delay-diamond: calc(var(--animation-duration-diamond) / 4);
+  --animation-delay-between-odd-and-even: calc(var(--animation-duration-diamond) / 16);
+
+  .diamond-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 60vh;
+    height: 60vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+
+    .diamond {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 100%;
+      height: 100%;
+      transform: scale(0) rotate(45deg);
+      animation: strechDiamond var(--animation-duration-diamond) cubic-bezier(0.5, 0, 0, 1) 0s 1 normal backwards;
+
+      &:nth-child(odd) {
+        background-color: var(--sub-color);
+      }
+
+      &:nth-child(even) {
+        background-color: var(--background-color);
+      }
+    }
+
+    @for $i from 0 to 3 {
+      .odd-$i {
+        animation-delay: calc(var(--animation-delay-diamond) * 2 * $(i));
+        z-index: calc(2 * $(i));
+      }
+
+      .even-$i {
+        animation-delay: calc(var(--animation-delay-diamond) * 2 * $(i) + var(--animation-delay-between-odd-and-even));
+        z-index: calc(2 * $(i) + 1);
+      }
+    }
+  }
+
+  .title-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 0;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    --animation-title-duration: 4s;
+    --animation-title-delay: 2s;
+    --animation-title-bar-duration: 8s;
+
+    .title-bar {
+      width: 0;
+      opacity: 0;
+      border: 1px solid var(--sub-color);
+      animation: strechTitleBar var(--animation-title-bar-duration) ease-in-out calc(var(--animation-delay-diamond) * 7) 1 normal forwards;
+    }
+
+    .title {
+      overflow: hidden;
+      height: auto;
+      line-height: 0;
+      font-size: 2em;
+      color: var(--sub-color);
+      animation: strechTitle var(--animation-title-duration) ease-in-out calc(var(--animation-delay-diamond) * 7 + var(--animation-title-delay)) 1 normal forwards;
+    }
+  }
+}

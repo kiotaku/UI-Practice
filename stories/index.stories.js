@@ -31,3 +31,9 @@ storiesOf('Demo', module)
   .add('Profile', () => (
     <Profile></Profile> 
   ))
+
+import Animation1 from 'components/CssAnimation/Animation1'
+storiesOf('CSS Animation', module)
+  .add('Animation1', () => (
+    <Animation1/>
+  ))

@@ -6,6 +6,7 @@ module.exports = {
     require('autoprefixer')({
       grid: true
     }),
+    require('postcss-for'),
     require('postcss-nested')
   ]
 }
