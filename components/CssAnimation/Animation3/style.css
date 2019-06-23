@@ -1,0 +1,19 @@
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+svg {
+  width: 300px;
+  height: 300px;
+  background: cornflowerblue;
+}
+
+.circle {
+  stroke: aqua;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill: none;
+  animation: draw 5s ease-in-out 1 normal forwards;
+}

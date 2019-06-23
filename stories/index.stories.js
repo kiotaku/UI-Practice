@@ -34,12 +34,16 @@ storiesOf('Demo', module)
 
 import Animation1 from 'components/CssAnimation/Animation1'
 import Animation2 from 'components/CssAnimation/Animation2'
+import Animation3 from 'components/CssAnimation/Animation3'
 storiesOf('CSS Animation', module)
   .add('Animation1', () => (
     <Animation1/>
   ))
   .add('Animation2', () => (
     <Animation2/>
+  ))
+  .add('Animation3', () => (
+    <Animation3/>
   ))
 
 import PolygonBackGround from 'components/Polygon/PolygonBackGround'
